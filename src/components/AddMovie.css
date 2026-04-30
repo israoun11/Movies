@@ -1,0 +1,88 @@
+.add-form {
+    background: #111; 
+    padding: 30px;
+    border-radius: 20px;
+    width: 400px;
+    border: 1px solid #222;
+    box-shadow: 0 25px 50px rgba(0,0,0,1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.add-form h3 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 25px;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 1px;
+}
+
+.add-form input, .add-form textarea {
+    background: #000;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 12px;
+    color: #fff;
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+
+.add-form input:focus {
+    border-color: #FFD700;
+    outline: none;
+}
+
+.submit-btn {
+    width: 100%;
+    background: #FFD700;
+    color: #000;
+    font-weight: 800;
+    padding: 15px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.add-movie-section {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+
+.plus-btn {
+    background: rgba(255, 255, 255, 0.03);
+    border: 2px dashed rgba(255, 215, 0, 0.3); 
+    width: 280px;
+    height: 150px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    color: #FFD700;
+    gap: 10px;
+}
+
+.plus-btn:hover {
+    background: rgba(255, 215, 0, 0.08);
+    border-color: #FFD700;
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.plus-btn::before {
+    content: '+';
+    font-size: 40px;
+    font-weight: 200;
+}
+
+.plus-btn::after {
+    content: 'ADD your fav movie';
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}

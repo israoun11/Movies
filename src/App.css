@@ -1,38 +1,206 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Dancing+Script:wght@400..700&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quintessential&family=Rubik+Bubbles&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+  background-color: #0b0d17;
+  margin: 0;
+  padding: 0;
+}
+.navbar {
+  position: absolute; 
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  box-sizing: border-box;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.7), transparent); 
+  z-index: 100; 
+  font-family: 'Segoe UI', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 40px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav-logo {
+  width: 90px;
+  filter: brightness(0) invert(1); 
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li {
+  color: white;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.nav-links li:hover {
+  opacity: 0.7;
+}
+
+.navbar-right {
+  color: white;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+:root {
+  --primary-white: #ffffff;
+  --accent-yellow: #f1c40f;
+  --glass-bg: rgba(255, 255, 255, 0.1);
+}
+
+.movie-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  border-radius: 12px;
+  overflow: hidden;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  color: white;
+  background: url('https://tse3.mm.bing.net/th/id/OIP.oEAR7ZrQ-NrYt7KIdV_jCwHaEK?rs=1&pid=ImgDetMain&o=7&rm=3') no-repeat center center/cover ;
+  display: flex;
+  align-items: flex-end;
+}
+
+.background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 20%, transparent 100%);
+  z-index: 1;
+}
+
+.content-wrapper {
+  position: relative;
+  z-index: 2;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  width: 100%;
+  align-items: flex-end;
+}
+
+.disney-logo{
+  width: 300px;
+  height: auto;
+  max-width: 500px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+
+.meta-data {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin-bottom: 30px;
+  display: flex;
+  gap: 10px;
+}
+
+
+.main-details {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.mini-poster {
+  width: 110px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+.description {
+  max-width: 400px;
+}
+
+.director {
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+.summary {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+.genre-tags {
+  display: flex;
+  gap: 10px;
+}
+
+.genre-tags span {
+  border: 1px solid rgba(255,255,255,0.5);
+  padding: 5px 20px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  background: var(--glass-bg);
+  backdrop-filter: blur(5px);
+}
+
+
+.rating-section {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: flex-end;
+  justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+.rating-circle {
+  width: 100px;
+  height: 100px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.circular-chart {
+  display: block;
+  margin: 10px auto;
+  max-width: 100%;
 }
+
+.circle-bg {
+  fill: none;
+  stroke: rgba(255,255,255,0.1);
+  stroke-width: 2.8;
+}
+
+.circle {
+  fill: none;
+  stroke: var(--accent-yellow);
+  stroke-width: 2.8;
+  stroke-linecap: round;
+}
+
+.percentage {
+  fill: white;
+  font-family: sans-serif;
+  font-size: 0.5rem;
+  font-weight: bold;
+  text-anchor: middle;
+}
+
+.brand-watermark {
+  font-size: 0.8rem;
+  opacity: 0.7;
+  margin-top: 50px;
+}
+
+
