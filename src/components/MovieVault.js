@@ -3,6 +3,7 @@ import { Star, Play } from 'lucide-react';
 import './MovieVault.css'; 
 import AddMovie from './AddMovie';
 import Filter from './Filter';
+import { Link } from 'react-router-dom';
 
 
 
@@ -127,10 +128,11 @@ const MovieVault = () => {
                 
               </div>
               
-              <button className="trailer-action-button">
-                <Play size={16} fill="currentColor" />
+              <Link to={'/movie/${film.id}'} className='trailer-action-button' style={{textDecoration: 'none'}}>
+                <Play size={16} fill='currentColor'/>
                 WATCH TRAILER
-              </button>
+              
+              </Link>
             </div>
           </div>
         ))}
